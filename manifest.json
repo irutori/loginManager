@@ -1,0 +1,24 @@
+{
+	"name": "support login",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "login support",
+	"options_page": "options.html",
+	"background":{
+		"page": "background.html"
+	},
+	"browser_action":{
+		"default_icon":"hoge.gif"
+	},
+	"content_scripts": [
+		{
+			"matches":[
+				"http://*/*"
+			],
+			"js": [
+				"script.js"
+			],
+			"run_at": "document_end"
+		}
+	]
+}
